@@ -28,3 +28,13 @@ Template.coupon.events({
 
     }
 });
+
+/**
+ * 分别过滤已使用列表和未使用列表
+ */
+Template.coupon.helpers({
+    
+    isUse: function (use) {
+        return !!use;
+    }
+});

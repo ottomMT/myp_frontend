@@ -1,3 +1,18 @@
+Template.sign.helpers({
+    headimg: function () {
+        return Meteor.user().profile.wechat.headimgurl
+    },
+    nickname: function(){
+        return Meteor.user().profile.wechat.nickname
+    },
+    sex: function(){
+        var sex = Meteor.user().profile.wechat.sex;
+        return sex == 1 ? '♂' : sex == 2 ? '♀' : '';
+    },
+    signLength: function () {
+        return Meteor.user().profile.signList && Meteor.user().profile.signList.length || 0;
+    }
+});
 Template.sign.events({
     // 打开规则弹层
     'click #gzbutton': function (e) {
@@ -65,8 +80,18 @@ Template.sign.events({
         $('#move_success').animate({
             opacity:0
         },300).css('display','none');
-    }
+    },
 
+    //签到
+    'click #sign': function () {
+
+
+        Meteor.call('sign', function (error, result) {
+            console.log('error', error);
+            console.log('result', result);
+        });
+
+    }
 
     // 未迁移成功包含迁移失败  (#move_faild)  和  未查询到数据 (#move_undefined),这两个弹层已经包含在页面中
 });
