@@ -1,0 +1,45 @@
+<template name="mamapaItem">
+  <h1 class="ui header">
+    <div class="ui right floated buttons">
+      <!--<button class="ui blue labeled icon button">-->
+      <!--<i class="edit icon"></i>-->
+      <!--编辑-->
+      <!--</button>-->
+      <!--<button class="ui red labeled icon button">-->
+      <!--<i class="trash icon"></i>-->
+      <!--删除-->
+      <!--</button>-->
+      <button class="ui blue button mamapaedit">编辑</button>
+      <div class="or" data-text="或"></div>
+      <button class="ui red button deletemamapa">删除</button>
+    </div>
+    {{mamapa.title}}
+  </h1>
+  <div class="sub header">{{mamapa.address}}</div>
+  <div class="ui four ordered steps">
+    <div class="{{signupStep.class}} step">
+      <div class="content">
+        <div class="title">报名{{signupStep.stateText}}</div>
+        <div class="description">{{signupStep.timeText}}</div>
+      </div>
+    </div>
+    <div class="{{inProgressStep.class}} step">
+      <div class="content">
+        <div class="title">活动{{inProgressStep.stateText}}</div>
+        <div class="description">{{inProgressStep.timeText}}</div>
+      </div>
+    </div>
+    <div class="{{reportStepClass}} step">
+      <div class="content">
+        <div class="title">后续报导</div>
+        <div class="description">填写并发布报导内容</div>
+      </div>
+    </div>
+  </div>
+  <div class="ui indicating progress" data-value="{{signupsCount signups.count}}" data-total="{{mamapa.numLimit}}" id="signupProgress">
+    <div class="bar"></div>
+    <div class="label">暂时没有报名</div>
+  </div>
+  {{> signupList}}
+  {{> imgUploader imgUrl=headerImg}}
+</template>

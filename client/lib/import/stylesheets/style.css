@@ -1,0 +1,9 @@
+.ui.grid {
+  height: 100%;
+}
+
+#left-menu {
+  border-radius: 0;
+  height: 100% !important;
+  width: auto;
+}

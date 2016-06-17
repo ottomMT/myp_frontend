@@ -1,0 +1,22 @@
+<template name="asideLayout">
+  {{#if currentUser}}
+    {{> yield 'nav'}}
+  {{/if}}
+  <div class="pushable">
+    <div class="ui centered grid">
+      {{> yield}}
+      {{#if currentUser}}
+      <div class="left floated three wide column" style="margin-right: 0;">
+        <div id="left-menu" class="ui inverted vertical menu">
+          {{> yield "aside"}}
+        </div>
+      </div>
+      {{/if}}
+      <div class="centered twelve wide column">
+        <div class="ui hidden divider"></div>
+        {{> yield "main"}}
+      </div>
+    </div>
+  </div>
+  {{> confirmDialog}}
+</template>

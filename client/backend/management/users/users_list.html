@@ -1,0 +1,20 @@
+<template name="usersList">
+
+  <table class="ui selectable striped table">
+    <thead>
+    <tr>
+      <th>姓名</th>
+      <th>角色</th>
+      <th>Email</th>
+      <th>最后登陆</th>
+      <th>创建时间</th>
+      <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each usersList}}
+      {{> usersItem}}
+    {{/each}}
+    </tbody>
+  </table>
+</template>

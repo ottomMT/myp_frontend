@@ -1,0 +1,35 @@
+<template name="header">
+  <div class="ui large teal menu" style="margin: auto">
+    <a href="/" class="ui logo icon item">
+      <img src="/img/myp_logo.png" alt="母婴派运营平台">
+      <div class="text">母婴派运营平台</div>
+    </a>
+    <a href="#" class="item"><i class="home icon"></i>首页</a>
+    <a href="{{pathFor 'mamapa'}}" class="{{isActivePath regex='^\\/mamapa'}} item"><i class="female icon"></i>妈妈Pa</a>
+    <a href="{{pathFor 'activities'}}" class="{{isActivePath regex='^\\/activities'}} item"><i class="leaf icon"></i>活动</a>
+    <a href="{{pathFor 'surveys'}}" class="{{isActivePath regex='^\\/surveys'}} item"><i class="tasks icon"></i>投票</a>
+    <div class="right menu">
+      {{#if isInRole '超级管理员'}}
+        <a href="{{pathFor 'usersManage'}}" class="{{isActivePath regex='^\\/users'}} item"><i class="setting icon"></i>后台管理</a>
+      {{/if}}
+      <div class="ui dropdown item" id="account">
+        <i class="user icon"></i>
+        {{name}}
+        <i class="dropdown icon"></i>
+        <div class="menu">
+          <a href="{{pathFor 'atChangePwd'}}" class="item"><i class="edit icon"></i>修改密码</a>
+          <a href="{{pathFor 'userLogout'}}" class="item"><i class="sign out icon"></i>登出</a>
+        </div>
+      </div>
+    </div>
+    <!--<div class="ui teal inverted right menu">-->
+      <!---->
+    <!--</div>-->
+    <script type="text/javascript">
+      $('#account')
+        .dropdown({
+          on: 'hover'
+        });
+    </script>
+  </div>
+</template>
