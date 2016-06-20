@@ -440,7 +440,8 @@ body{
 }
 
 ul li:active{
-  background-color: #F3F3F3;
+  /*background-color: #F3F3F3;*/
+  background-color: #5DC3A6;
 }
 
 .disabled{
@@ -456,6 +457,9 @@ ul li:active{
   opacity: .4;
   color: white;
   padding: 0 1.04rem;
+}
+.disabled_li:active{
+  background-color: #66D5B5 !important;
 }
 .disabled_li .jiantou{
   display: none;
