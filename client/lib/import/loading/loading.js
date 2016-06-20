@@ -15,5 +15,5 @@ Template.loading.destroyed = function () {
   }
 };
 
-var message = '<p class="loading-message">正在加载……</p>';
+var message = '<p class="loading-message">正在加载</p>';
 var spinner = '<div class="sk-spinner sk-spinner-cube-grid"><div class="sk-cube"></div><div class="sk-cube"></div><div class="sk-cube"></div><div class="sk-cube"></div><div class="sk-cube"></div><div class="sk-cube"></div><div class="sk-cube"></div><div class="sk-cube"></div><div class="sk-cube"></div></div>';
