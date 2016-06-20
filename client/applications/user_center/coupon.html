@@ -1,0 +1,99 @@
+<template name="coupon">
+    <div class="my-coupon">
+        <!-- 我的优惠券列表 -->
+        <!--未使用优惠券样式-->
+        <div class="mygift">
+            <div class="gift-card">
+                <div class="gift-img">
+                    <img src="http://ac-mMItENRX.clouddn.com/36667d86a28bfc429d13.png" alt="">
+                </div>
+                <p class="gift-title">33度婴幼儿游泳拓展训练馆</p>
+                <p class="gift-desc">婴幼儿游泳体验券</p>
+            </div>
+            <div class="gift-card-bottom">
+                <p class="gift-time">有效期至：2016-08-31</p>
+                <p class="gift-status">未兑换</p>
+                <div style="clear: both;"></div>
+            </div>
+        </div>
+
+        <!--已使用优惠券样式-->
+        <div class="mygift gift-used">
+            <div class="gift-card">
+                <div class="gift-img">
+                    <img src="http://ac-mMItENRX.clouddn.com/36667d86a28bfc429d13.png" alt="">
+                </div>
+                <p class="gift-title">33度婴幼儿游泳拓展训练馆</p>
+                <p class="gift-desc">婴幼儿游泳体验券</p>
+            </div>
+            <div class="gift-card-bottom">
+                <p class="gift-time">有效期至：2016-08-31</p>
+                <p class="gift-status">已兑换</p>
+                <div style="clear: both;"></div>
+            </div>
+        </div>
+
+        <div>
+            <div class="floatbutton">
+                <!-- <img src="/sign/img/testma.png" alt="" /> -->
+                <span>兑换</span>
+            </div>
+            <div class="daerweima">
+                <div class="erweimaimg">
+                    <div id="bigcode"></div>
+                </div>
+                <!-- <img id="daimg" src="/sign/img/testma.jpg" alt=""> -->
+                <p>兑换时请向商家出示</p>
+            </div>
+        </div>
+    </div>
+
+    <!--二维码生成文件-->
+    <!--<script src="/lib/qrcodejs/qrcode.min.js"></script>-->
+    <!--<script type="text/javascript">-->
+        <!--$(function(){-->
+    <!---->
+            <!--var qr = $('.erweimaimg');-->
+    <!---->
+            <!--// for(var i = 0; i < qr.length; i++){-->
+            <!--//   makeQr(qr[i]);-->
+            <!--// }-->
+            <!--makeQr(qr[0]);-->
+            <!--function makeQr(ele){-->
+                <!--var data = <%= user.No && (user.No + 10000000) || 0%>;-->
+                <!--var me = $(ele);// data = me.attr('data-id');-->
+                <!--if(data){-->
+                    <!--var qrcode = new QRCode(ele, {-->
+                        <!--text: data.toString(),-->
+                        <!--width: 240,-->
+                        <!--height: 240,-->
+                        <!--colorDark : "#000000",-->
+                        <!--colorLight : "#ffffff",-->
+                        <!--correctLevel : QRCode.CorrectLevel.H-->
+                    <!--});-->
+                <!--}-->
+            <!--}-->
+
+             <!--.each(function(ele, index){-->
+               <!--var me = $(ele), data = me.attr('data-id');-->
+               <!--console.log('data', data);-->
+               <!--console.log('me', me);-->
+               <!--console.log('ele', ele);-->
+               <!--if(data){-->
+                 <!--var qrcode = new QRCode(this, {-->
+                     <!--text: data,-->
+                     <!--width: 240,-->
+                     <!--height: 240,-->
+                     <!--colorDark : "#000000",-->
+                     <!--colorLight : "#ffffff",-->
+                     <!--correctLevel : QRCode.CorrectLevel.H-->
+                 <!--});-->
+               <!--}-->
+             <!--});-->
+        <!--});-->
+        <!--$(document).ready(-->
+    <!---->
+        <!--);-->
+
+    <!--</script>-->
+</template>
