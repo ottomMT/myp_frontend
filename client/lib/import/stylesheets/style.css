@@ -689,6 +689,7 @@ ul li:active{
   font-size: 0.4rem;
   background-color: rgba(0,0,0,0);
   border-style: none;
+  outline: 0;
 }
 
 /*弹层样式*/
