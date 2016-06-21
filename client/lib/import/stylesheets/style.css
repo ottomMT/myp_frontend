@@ -1031,7 +1031,13 @@ input {outline:none;}
   /*padding:10px;*/
   padding: 0.3rem;
 }
-.list dl {overflow:hidden;}
+.list dl:first-child{
+  margin-top: 0;
+}
+.list dl {
+  overflow:hidden;
+  margin-top: 0.3rem;
+}
 .list dl a { display:block;}
 .list dl dt {float:left; width:40%; height:auto;}
 .list dl dt img { width:100%; height:auto; display:block;}
@@ -1151,7 +1157,7 @@ ul.info{
 #shadow .img { position:fixed; left:20%; top:45%; width:60%;}
 #shadow .img img { width:100%;}
 
-.kong{
+.mmp .kong{
   font-size: 0.37rem;
   text-align: center;
   color: white;

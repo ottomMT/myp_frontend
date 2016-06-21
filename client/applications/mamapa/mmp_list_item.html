@@ -1,0 +1,12 @@
+<template name="mmpListItem">
+    <dl>
+        <a href="/mmp-details/{{_id}}" class="hold">
+            <dt><img src="{{headerImg}}" alt="{{title}}"></dt>
+            <dd class="title">{{title}}</dd>
+            <dd class="time">时间：{{startTime}}</dd>
+            <dd class="addr">地点：{{address}}</dd>
+            <dd class="btn" style="background-color: {{mmp_state.buttonColor}}">{{mmp_state.state}}</dd>
+            <div class="clr"></div>
+        </a>
+    </dl>
+</template>

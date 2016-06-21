@@ -16,8 +16,8 @@ if (MamaPas.find().count() < 4 ) {
     authorId: sacha._id,
     author: sacha.profile.name,
     createAt: new Date(now - 27 * 3600 * 1000),
-    startAt: new Date(now - 30 * 3600 * 1000),
-    finishAt: new Date(now - 31 * 3600 * 1000),
+    startAt: new Date(now + 30 * 3600 * 1000),
+    finishAt: new Date(now + 31 * 3600 * 1000),
     signupAt: new Date(now - 29 * 3600 * 1000),
     detailText: '【活动内容】超级蹦蹦床；海洋球大战；花式自拍；球池寻宝\
                 【宝贝年龄】6-30个月\
@@ -25,7 +25,7 @@ if (MamaPas.find().count() < 4 ) {
                 【活动时间】5月29日 12:45-13:45',
     videoUrl: ' ',
     address: '北国商城负一层 共享大厅',
-    headImg: 'http://ac-mMItENRX.clouddn.com/b18e22c78c5b3aab1e17.jpg',
+    headerImg: 'http://ac-mmitenrx.clouddn.com/b18e22c78c5b3aab1e17.jpg',
     numLimit: 35,
     contentImg: 'http://ac-mMItENRX.clouddn.com/be9757155d753e3bf910.jpg',
     signupFields: {
@@ -62,7 +62,7 @@ if (MamaPas.find().count() < 4 ) {
                    【活动时间】5月20日11:00-12:30',
     videoUrl: ' ',
     address: '港炯餐厅 长安区乐汇城四楼',
-    headImg: 'http://ac-mMItENRX.clouddn.com/b18e22c78c5b3aab1e17.jpg',
+    headerImg: 'http://ac-mmitenrx.clouddn.com/b18e22c78c5b3aab1e17.jpg',
     numLimit: 35,
     contentImg: 'http://ac-mMItENRX.clouddn.com/be9757155d753e3bf910.jpg',
     signupFields: {
@@ -98,7 +98,7 @@ if (MamaPas.find().count() < 4 ) {
                 【活动时间】5月29日 12:45-13:45',
     videoUrl: ' ',
     address: '北国商城负一层 共享大厅',
-    headImg: 'http://ac-mMItENRX.clouddn.com/b18e22c78c5b3aab1e17.jpg',
+    headerImg: 'http://ac-mmitenrx.clouddn.com/b18e22c78c5b3aab1e17.jpg',
     numLimit: 35,
     contentImg: 'http://ac-mMItENRX.clouddn.com/be9757155d753e3bf910.jpg',
     signupFields: {
@@ -157,7 +157,7 @@ if (MamaPas.find().count() < 4 ) {
   // }
 }
 
-if (Signups.find().count() === 0) {
+if (Signups.find().count() < 53) {
   var now = new Date().getTime();
 
   var ruId = Meteor.users.insert({
@@ -178,7 +178,7 @@ if (Signups.find().count() === 0) {
       babyName: ru.profile.name + '的宝宝',
       babyBirthday: new Date(now - 3 * 365 * 24 * 3600 * 1000),
       weixinGroup: 2,
-      mamapaId: 'pymfNmrSdnBDRDkfb'
+      mamapaId: 'JfMqxqSe5zwQKJevG'
     });
   }
 
@@ -191,7 +191,7 @@ if (Signups.find().count() === 0) {
       babyName: nan.profile.name + '的宝宝',
       babyBirthday: new Date(now - 3 * 365 * 24 * 3600 * 1000),
       weixinGroup: 2,
-      mamapaId: '4wtsJLPsuYED9RLHL'
+      mamapaId: 'JfMqxqSe5zwQKJevG'
     });
   }
 }

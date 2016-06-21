@@ -5,14 +5,11 @@
             <div id="content">
 
                 <!--活动头图区域-->
-                <div class="con_img"><img src="http://ac-mMItENRX.clouddn.com/be9757155d753e3bf910.jpg" alt="【菱美教育】最好创意拼出来"></div>
+                <div class="con_img"><img src="{{mamapas.contentImg}}" alt="{{mamapas.title}}"></div>
 
                 <!--活动内容区域-->
                 <div class="con_con sns_content">
-                    【活动内容】分组比拼+亲子拼玩具+礼品派发+明星宝宝拍MV
-                    【宝贝年龄】3-5岁
-                    【人数限定】6-8组家庭，宝妈带宝儿到场哦
-                    【活动时间】6月24日 9:30-12:00
+                    {{mamapas.detailText}}
                 </div>
 
                 <!--视频区域-->
@@ -22,10 +19,10 @@
                 <div class="line"></div>
                 <!--活动摘要区域-->
                 <ul class="info">
-                    <li>时间：2016-06-24 09:30</li>
-                    <li>地点：菱美教育 体育大街谈南路睿和中心405</li>
-                    <li>参与人数：<span>89</span></li>
-                    <li>已报名人数：<span>35</span></li>
+                    <li>时间：{{detailsStartTime}}</li>
+                    <li>地点：{{mamapas.address}}</li>
+                    <li>参与人数：<span>{{mamapas.numLimit}}</span></li>
+                    <li>已报名人数：<span>{{joinNumber}}</span></li>
                 </ul>
                 <div class="line"></div>
                 <!--报名表单区域-->
