@@ -26,58 +26,73 @@
                 </ul>
                 <div class="line"></div>
                 <!--报名表单区域-->
+                {{#autoForm id="afInsertSignups" type="insert" collection="Signups"}}
                 <div id="form">
                     <form>
-                        <input type="hidden" name="id" value="<?=$id?>">
+                        <!--<input type="hidden" name="id" value="<?=$id?>">-->
                         <dl>
                             <dt>姓名：</dt>
-                            <dd><input type="text" name="name" ></dd>
+                            <dd>
+                                {{> afQuickField name='mamaname' placeholder=""}}
+                            </dd>
+                            <!--<dd><input type="text" name="name" ></dd>-->
                         </dl>
                         <dl>
                             <dt>联系方式：</dt>
-                            <dd><input type="num" name="tel" ></dd>
+                            <dd>
+                                {{> afQuickField name='mamaTel' placeholder=""}}
+                                <!--<input type="num" name="tel" >-->
+                            </dd>
                         </dl>
 
                         <dl>
                             <dt>家庭住址：</dt>
-                            <dd><input type="text" name="addr" ></dd>
-                        </dl>
-                        <dl>
-                            <dt>宝宝姓名：</dt>
-                            <dd><input type="text" name="babyName" ></dd>
-                        </dl>
-                        <dl>
-                            <dt>宝宝年龄：</dt>
                             <dd>
-                                <select name="ageYear" id="ageYear" class="age">
-                                    <option value="">年</option>
-                                </select>
-                                <select name="ageMonth" id="ageMonth" class="age">
-                                    <option value="" >月</option>
-                                </select>
-                                <select name="ageDay" id="ageDay" class="age">
-                                    <option value="" >日</option>
-                                </select>
+                                <!--<input type="text" name="addr" >-->
+                                {{> afQuickField name='homeAddr' placeholder=""}}
                             </dd>
                         </dl>
                         <dl>
-                            <dt>怀孕几周：</dt>
-                            <dd><select name="week">
-                                <option value="1">1周</option>
-                                <option value="1">2周</option>
-                                <option value="1">3周</option>
-                            </select></dd>
+                            <dt>宝宝姓名：</dt>
+                            <dd>
+                                <!--<input type="text" name="babyName" >-->
+                                {{> afQuickField name='babyName' placeholder=""}}
+                            </dd>
                         </dl>
+                        <!--<dl>-->
+                            <!--<dt>宝宝年龄：</dt>-->
+                            <!--<dd>-->
+                                <!--<select name="ageYear" id="ageYear" class="age">-->
+                                    <!--<option value="">年</option>-->
+                                <!--</select>-->
+                                <!--<select name="ageMonth" id="ageMonth" class="age">-->
+                                    <!--<option value="" >月</option>-->
+                                <!--</select>-->
+                                <!--<select name="ageDay" id="ageDay" class="age">-->
+                                    <!--<option value="" >日</option>-->
+                                <!--</select>-->
+                            <!--</dd>-->
+                        <!--</dl>-->
+                        <!--<dl>-->
+                            <!--<dt>怀孕几周：</dt>-->
+                            <!--<dd>-->
+                                <!--<select name="week">-->
+                                    <!--<option value="1">1周</option>-->
+                                    <!--<option value="1">2周</option>-->
+                                    <!--<option value="1">3周</option>-->
+                                <!--</select>-->
+                            <!--</dd>-->
+                        <!--</dl>-->
                         <dl>
                             <dt>在妈宝几群：</dt>
                             <dd>
-                                <select name="group">
-                                    <option value="0">不在群中</option>
-                                    <!--<option value="<%= i %>"><%= i %>群</option>-->
-                                    <option value="孕1">孕1群</option>
-                                    <option value="孕2">孕2群</option>
-                                    <option value="孕3">孕3群</option>
-                                </select>
+                                <!--<select name="group">-->
+                                    <!--<option value="0">不在群中</option>-->
+                                    <!--&lt;!&ndash;<option value="<%= i %>"><%= i %>群</option>&ndash;&gt;-->
+                                    <!--<option value="孕1">孕1群</option>-->
+                                    <!--<option value="孕2">孕2群</option>-->
+                                    <!--<option value="孕3">孕3群</option>-->
+                                <!--</select>-->
                             </dd>
                         </dl>
                         <!-- <dl>
@@ -91,6 +106,7 @@
                     </form>
                     <p class="submit"><a id="sub">我要报名</a></p>
                 </div>
+                {{/autoForm}}
             </div>
             <div class="fxtip" style="display:none">
                 <div class="tip">
