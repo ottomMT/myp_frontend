@@ -2,18 +2,8 @@
     <div class="signbody">
         <!-- 个人信息 -->
         <div class="head">
-            <!--显示头像-->
-            <a href="/user-center"><img class="touxiang" src="{{headimg}}" alt=""></a>
-            <div class="name">{{nickname}} {{sex}}</div>
-            <div class="points">
-              <span id="credit">
-                  <!--派币数显示-->
-                <strong>23</strong>
-                  <!-- π币 -->
-                <span><img src="/img/coin.svg" alt=""></span>
-              </span>
-            </div>
-
+            <!-- 头像，性别，积分 -->
+            {{> userHead}}
             <!--活动规则按钮-->
             <button id="gzbutton" type="gzbutton" name="button">活动规则</button>
 
@@ -34,13 +24,9 @@
         <div class="timeline">
             <div class="line"></div>
             <ul>
-                <li>7</li>
-                <li>8</li>
-                <li class="active">9</li>
-                <li>10</li>
-                <li>11</li>
-                <li>12</li>
-                <li>13</li>
+                {{#each showDay}}
+                <li class="{{isSignClass(this)}}">{{this}}</li>
+                {{/each}}
             </ul>
             <!--标示当前日期的图片,每次往右挪一个数字需在 css 的 left 属性上 加 1.42 rem-->
             <img src="/img/girl.svg" alt="" />
@@ -48,7 +34,11 @@
         <!-- 签到，累计签到次数 -->
         <div class="checkin">
             <div class="info">已累计签到 <span id="ready">{{signLength}}</span> 天</div>
-            <div id="sign" class="checkinbutton disabled">已签/签到</div>
+            {{#if isSign}}
+              <div class="checkinbutton disabled">已签</div>
+            {{else}}
+              <div id="sign" class="checkinbutton">签到</div>
+            {{/if}}
         </div>
 
         <!-- 签到规则弹层 -->

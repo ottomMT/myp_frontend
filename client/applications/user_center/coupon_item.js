@@ -7,5 +7,8 @@ Template.couponItem.helpers({
     },
     deadline: function (deadline) {
         return moment(deadline).format('YYYY-MM-DD') || '';
+    },
+    useClass: function () {
+        return this.use ? 'gift-used' : '';
     }
 });

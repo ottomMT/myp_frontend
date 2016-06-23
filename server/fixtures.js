@@ -209,6 +209,7 @@ if(Gifts.find().count() < 1){
         type: '总计签到', //类型
         day: 14, //签到天数
         provide: 967, //已发送个数
+        business: 'skdfks231LKfa',
         use: 17, // 已使用个数
         start: new Date('2016-04-30T16:00:00.000Z'), // 开始时间
         end: new Date('2016-07-30T16:00:00.000Z'), // 结束时间
@@ -219,6 +220,7 @@ if(Gifts.find().count() < 1){
 
     Gifts.insert({
         name: "运动类专业体验活动虚拟券", //名称
+        business: 'skdfks231LKfa',
         shop: '小小运动馆', // 店铺
         type: '总计签到', //类型
         day: 21, //签到天数
@@ -234,6 +236,7 @@ if(Gifts.find().count() < 1){
     Gifts.insert({
         name: "婴幼儿游泳体验券", //名称
         shop: '33度婴幼儿游泳拓展训练馆', // 店铺
+        business: 'skdfks231LKfa',
         type: '总计签到', //类型
         day: 7, //签到天数
         provide: 1469, //已发送个数
@@ -248,6 +251,7 @@ if(Gifts.find().count() < 1){
     Gifts.insert({
         name: "花途妈妈500元拍摄卡", //名称
         shop: '花途妈妈儿童摄影潮品馆', // 店铺
+        business: 'skdfks231LKfa',
         type: '总计签到', //类型
         day: 30, //签到天数
         provide: 5, //已发送个数

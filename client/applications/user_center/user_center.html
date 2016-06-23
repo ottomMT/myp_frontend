@@ -1,18 +1,8 @@
 <template name="userCenter">
     <div class="signbody">
-        <!-- 头部个人信息 -->
-        <div class="head">
-            <!-- 头像 -->
-            <img class="touxiang" src="{{headimg}}" alt="">
-            <!--用户昵称及性别-->
-            <div class="name">{{nickname}} {{sex}}</div>
-            <div class="points">
-                <!--派币数量-->
-                <span id="credit"><strong>23</strong></span>
-                <!-- π币图标 -->
-                <span><img src="/img/coin.svg" alt=""></span>
-            </div>
-        </div>
+      <div class="head">
+        {{> userHead}}
+      </div>
 
         <!--功能列表区-->
         <div class="function">

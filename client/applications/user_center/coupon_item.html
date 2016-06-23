@@ -1,14 +1,16 @@
 <template name="couponItem">
-    <div class="gift-card">
-        <div class="gift-img">
-            <img src="{{giftInfo.img}}" alt="">
+    <div class="mygift {{useClass}}">
+        <div class="gift-card">
+            <div class="gift-img">
+                <img src="{{giftInfo.img}}" alt="">
+            </div>
+            <p class="gift-title">{{giftInfo.shop}}</p>
+            <p class="gift-desc">{{giftInfo.name}}</p>
         </div>
-        <p class="gift-title">{{giftInfo.shop}}</p>
-        <p class="gift-desc">{{giftInfo.name}}</p>
-    </div>
-    <div class="gift-card-bottom">
-        <p class="gift-time">有效期至：{{deadline(giftInfo.deadline)}}</p>
-        <p class="gift-status">{{useText}}</p>
-        <div style="clear: both;"></div>
+        <div class="gift-card-bottom">
+            <p class="gift-time">有效期至：{{deadline(giftInfo.deadline)}}</p>
+            <p class="gift-status">{{useText}}</p>
+            <div style="clear: both;"></div>
+        </div>
     </div>
 </template>

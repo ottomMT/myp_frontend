@@ -1,23 +1,10 @@
 <template name="coupon">
     <div class="my-coupon">
-        <!-- 我的优惠券列表 -->
-        <!--未使用优惠券样式-->
-        <div class="mygift">
-            {{#each coupons}}
-                {{#if 1}}
-                    {{ > couponItem}}
-                {{/if}}
-            {{/each}}
-        </div>
-
-        <!--已使用优惠券样式-->
-        <div class="mygift gift-used">
-            {{#each coupons}}
-                {{#if use}}
-                    {{ > couponItem}}
-                {{/if}}
-            {{/each}}
-        </div>
+        <!-- 我的优惠券列表 End -->
+          {{#each coupons}}
+              {{ > couponItem}}
+          {{/each}}
+        <!-- 我的优惠券列表 End -->
 
         <div>
             <div class="floatbutton">

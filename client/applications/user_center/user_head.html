@@ -1,0 +1,19 @@
+<template name="userHead">
+  <!-- 头部个人信息 -->
+  <!--显示头像-->
+  <a href="{{pathFor 'userCenter'}}">
+    <img class="touxiang" src="{{headimg}}" alt="">
+  </a>
+  <div class="name">{{nickname}} {{sex}}</div>
+  <div class="points">
+    <span id="credit">
+      <!--派币数显示-->
+      <strong>{{credit}}</strong>
+      <!-- π币 -->
+      <span>
+        <img src="/img/coin.svg" alt="">
+      </span>
+    </span>
+  </div>
+
+</template>

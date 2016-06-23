@@ -1,16 +1,63 @@
 Template.sign.helpers({
-    headimg: function () {
-        return Meteor.user().profile.wechat.headimgurl
-    },
-    nickname: function(){
-        return Meteor.user().profile.wechat.nickname
-    },
-    sex: function(){
-        var sex = Meteor.user().profile.wechat.sex;
-        return sex == 1 ? '♂' : sex == 2 ? '♀' : '';
-    },
+    /**
+     * 签到天数，取用户签到记录总天数，默认值为0
+     * @return {number} 签到天数
+     */
     signLength: function () {
         return Meteor.user().profile.signList && Meteor.user().profile.signList.length || 0;
+    },
+    /**
+     * 判断用户是否已签到过
+     * 通过当前日期匹配签到记录
+     * @return {boolean}
+     */
+    isSign: function(){
+      var signList = Meteor.user().profile.signList;
+          signList = _.isArray(signList) ? signList : [];
+      return signList.indexOf(moment().format('YYYY-MM-DD')) > -1 ? true : false;
+    },
+    /**
+     * 签到底部最近一周日期显示
+     * 返回最近一周日期数组
+     * @return {array}
+     */
+    showDay: function(){
+        var date = new Date(),
+            month = date.getMonth() + 1,
+            year = date.getFullYear(),
+            day = date.getDate();
+        var start = (Math.ceil(day/7) - 1) * 7 + 1,
+            end = start + 7,
+            monthDay,
+            li = '';
+            monthDay = new Date((new Date(year + '/' + (month + 1) + '/1 00:00').getTime() - 3600000)).getDate() + 1;
+        // 如果为最后一周
+        if(Math.ceil(day/7) > 4){
+          end = monthDay;
+          start = end - 7;
+        }
+
+        var days = [];
+        for(i = start; i < end; i++){
+          days.push(i);
+        }
+        return days;
+    },
+    /**
+     * 验证该日期用户是否已签到,
+     * 如果已签到，返回 active 未签到返回 ''
+     * @return {string}
+     */
+    isSignClass: function(date){
+      var signList = Meteor.user().profile.signList,
+          active = false;
+          signList = _.isArray(signList) ? signList : [];
+          _.forEach(signList, function(item){
+            if(moment(item).date() === date){
+              active = true;
+            }
+          });
+          return active ? 'active' : '';
     }
 });
 Template.sign.events({
@@ -84,15 +131,12 @@ Template.sign.events({
 
     //签到
     'click #sign': function () {
-
-
+        if(this.isSign) return false;
         Meteor.call('sign', function (error, result) {
-            console.log('error', error);
-            console.log('result', result);
+          
         });
 
     }
 
     // 未迁移成功包含迁移失败  (#move_faild)  和  未查询到数据 (#move_undefined),这两个弹层已经包含在页面中
 });
-

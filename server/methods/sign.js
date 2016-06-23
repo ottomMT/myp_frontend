@@ -11,9 +11,6 @@ Meteor.methods({
             signMonth = profile.signMonth, // 签到月份
             preLength = signList && parseInt(signList.length) || 0; // 已签到天数
 
-        console.log('signList', signList);
-        console.log('signMonth', signMonth);
-        console.log('preLength', preLength);
         /**
          * 上一次签到是否为本月签到
          * 如果是本月签到,则更新签到数据
@@ -77,15 +74,38 @@ Meteor.methods({
             _.forEach(gifts, function (item) {
                 result.gifts.push(Coupons.insert({
                     user: Meteor.userId(),
-                    gift: item._id
+                    gift: item._id,
+                    business: item.business,
+                    createAt: new Date()
                 }));
 
             });
+
+            // 没有发放奖品，增加积分
+            if(!result.gifts.length){
+              Meteor.users.update(Meteor.userId(), {$inc: {'profile.credit':10}});
+            }
 
 
         }
 
         return result;
 
+    },
+    /**
+     * 清空用户上月数据
+     * @return {[type]} [description]
+     */
+    clearSign: function(){
+
+      var profile = Meteor.user().profile,
+          now = moment(),
+          signMonth = profile.signMonth; // 签到月份
+
+          if(signMonth !== moment().format('YYYY-MM')){
+            return Meteor.users.update(Meteor.userId(), {$set: {'profile.signList':[]}});
+          }else{
+            return true;
+          }
     }
 });
