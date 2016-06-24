@@ -1,0 +1,19 @@
+<template name="giftList">
+    <a class="card" href="{{pathFor 'giftItem'}}">
+        <div class="images">
+            <img src="{{img}}" alt="">
+        </div>
+        <div class="content">
+            <div class="title">{{shop}}</div>
+            <div class="desc">{{name}}</div>
+        </div>
+        <div class="lastdays">
+            {{#if remainDay}}
+            <span>{{remainDay}}</span>天<p>剩余</p>
+            {{else}}
+            <img src="/img/duigou.svg" alt="">
+            {{/if}}
+        </div>
+        <div style="clear: both;"></div>
+    </a>
+</template>

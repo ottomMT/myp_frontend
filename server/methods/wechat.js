@@ -33,7 +33,9 @@ Meteor.methods({
       accessToken: accessToken
     };
     options = {
-      profile: info
+      profile: {
+        wechat :info
+      }
     };
 
     // // Confirm that your accessToken is you
@@ -59,6 +61,7 @@ Meteor.methods({
 
     // Returns a token you can use to login
     var loginResult = Accounts.updateOrCreateUserFromExternalService('wechat', serviceData, options);
+    Meteor.users.update({_id: loginResult.userId}, {$set: {'profile.wechat': info}});
 
     // Login the user
     // Meteor.connection.setUserId(loginResult.userId);

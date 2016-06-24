@@ -17,3 +17,11 @@ Meteor.publish('usersData', function() {
     this.ready();
   }
 });
+
+Meteor.publish('gifts', function () {
+  return Gifts.find();
+});
+
+Meteor.publish('coupons', function () {
+  return Coupons.find();
+});

@@ -1,37 +1,10 @@
 <template name="coupon">
     <div class="my-coupon">
-        <!-- 我的优惠券列表 -->
-        <!--未使用优惠券样式-->
-        <div class="mygift">
-            <div class="gift-card">
-                <div class="gift-img">
-                    <img src="http://ac-mMItENRX.clouddn.com/36667d86a28bfc429d13.png" alt="">
-                </div>
-                <p class="gift-title">33度婴幼儿游泳拓展训练馆</p>
-                <p class="gift-desc">婴幼儿游泳体验券</p>
-            </div>
-            <div class="gift-card-bottom">
-                <p class="gift-time">有效期至：2016-08-31</p>
-                <p class="gift-status">未兑换</p>
-                <div style="clear: both;"></div>
-            </div>
-        </div>
-
-        <!--已使用优惠券样式-->
-        <div class="mygift gift-used">
-            <div class="gift-card">
-                <div class="gift-img">
-                    <img src="http://ac-mMItENRX.clouddn.com/36667d86a28bfc429d13.png" alt="">
-                </div>
-                <p class="gift-title">33度婴幼儿游泳拓展训练馆</p>
-                <p class="gift-desc">婴幼儿游泳体验券</p>
-            </div>
-            <div class="gift-card-bottom">
-                <p class="gift-time">有效期至：2016-08-31</p>
-                <p class="gift-status">已兑换</p>
-                <div style="clear: both;"></div>
-            </div>
-        </div>
+        <!-- 我的优惠券列表 End -->
+          {{#each coupons}}
+              {{ > couponItem}}
+          {{/each}}
+        <!-- 我的优惠券列表 End -->
 
         <div>
             <div class="floatbutton">
