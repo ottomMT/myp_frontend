@@ -1,0 +1,79 @@
+<template name="mmpSignupForm">
+    <!--报名表单区域-->
+    {{#autoForm id="afInsertSignups" type="insert" collection="Signups"}}
+        <div id="form">
+            <!--<form>-->
+                {{> afFieldInput name="mamaId" type="hidden"}}
+                {{> afFieldInput name="signedAt" type="hidden"}}
+                {{> afFieldInput name="mamapaId" type="hidden" value=getMamapaId}}
+
+                {{# if mamapas.signupFields.mamaName}}
+                <dl>
+                    <dt>姓名：</dt>
+                    <dd>
+                        {{> afFieldInput name='mamaName' placeholder=""}}
+                    </dd>
+                </dl>
+                {{/if}}
+
+                {{# if mamapas.signupFields.mamaTel}}
+                <dl>
+                    <dt>手机：</dt>
+                    <dd>
+                        {{> afFieldInput name='mamaTel' placeholder=""}}
+                    </dd>
+                </dl>
+                {{/if}}
+
+                {{# if mamapas.signupFields.mamaAddress}}
+                <dl>
+                    <dt>家庭住址：</dt>
+                    <dd>
+                        {{> afFieldInput name='mamaAddress' placeholder=""}}
+                    </dd>
+                </dl>
+                {{/if}}
+
+                {{# if mamapas.signupFields.babyName}}
+                <dl>
+                    <dt>宝宝姓名：</dt>
+                    <dd>
+                        {{> afFieldInput name='babyName' placeholder=""}}
+                    </dd>
+                </dl>
+                {{/if}}
+
+                {{# if mamapas.signupFields.babyBirthday}}
+                <dl>
+                    <dt>宝宝生日：</dt>
+                    <dd>
+                        {{> afFieldInput name='babyBirthday'}}
+                    </dd>
+                </dl>
+                {{/if}}
+
+
+                {{# if mamapas.signupFields.pregnantWeek }}
+                <dl>
+                    <dt>怀孕几周：</dt>
+                    <dd>
+                        {{> afFieldInput name='pregnantWeek' placeholder="请选择"}}
+                    </dd>
+                </dl>
+                {{/if}}
+
+                {{# if mamapas.signupFields.weixinGroup }}
+                <dl>
+                    <dt>在妈宝几群：</dt>
+                    <dd>
+                        {{> afFieldInput name='weixinGroup' placeholder="请选择"}}
+                    </dd>
+                </dl>
+                {{/if}}
+            <!--</form>-->
+            <div class="signup-square">
+                <input type="submit" id="signup" value="我要报名">
+            </div>
+        </div>
+    {{/autoForm}}
+</template>

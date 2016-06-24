@@ -35,7 +35,8 @@
 //       babyName: true,
 //       babyBirthday: true,
 //       weixinGroup: true,
-//       gestAge: false
+//       gestAge: false,
+//       pregnantWeek: true
 //     },
 //     reportDetail: '為英價面聽使。是兒好出生去他們行臺媽王檢們，示由藝主族有界變具總你千在今。' +
 //     '說一算；日裝功務目優重夠，願德式國為人例，當走民活際選全文，然展實票成分傳電老。時取先投現業' +
@@ -72,7 +73,8 @@
 //       babyName: true,
 //       babyBirthday: true,
 //       weixinGroup: true,
-//       gestAge: false
+//       gestAge: false,
+//       pregnantWeek: true
 //     },
 //     reportDetail: '為英價面聽使。是兒好出生去他們行臺媽王檢們，示由藝主族有界變具總你千在今。' +
 //     '說一算；日裝功務目優重夠，願德式國為人例，當走民活際選全文，然展實票成分傳電老。時取先投現業' +
@@ -108,7 +110,8 @@
 //       babyName: true,
 //       babyBirthday: true,
 //       weixinGroup: true,
-//       gestAge: false
+//       gestAge: false,
+//       pregnantWeek: true
 //     },
 //     reportDetail: '為英價面聽使。是兒好出生去他們行臺媽王檢們，示由藝主族有界變具總你千在今。' +
 //     '說一算；日裝功務目優重夠，願德式國為人例，當走民活際選全文，然展實票成分傳電老。時取先投現業' +
@@ -157,7 +160,7 @@
 //   // }
 // }
 //
-// if (Signups.find().count() < 53) {
+// if (Signups.find().count() < 3) {
 //   var now = new Date().getTime();
 //
 //   var ruId = Meteor.users.insert({
@@ -169,12 +172,13 @@
 //   });
 //   var nan = Meteor.users.findOne(nanId);
 //
-//   for (var a = 0; a < 12; a++) {
+//   for (var a = 0; a < 1; a++) {
 //     Signups.insert({
 //       signedAt: new Date(),
 //       mamaName: ru.profile.name,
 //       mamaTel: '13555555555',
 //       mamaId: ru._id,
+//       pregnantWeek: 1,
 //       babyName: ru.profile.name + '的宝宝',
 //       babyBirthday: new Date(now - 3 * 365 * 24 * 3600 * 1000),
 //       weixinGroup: 2,
@@ -182,12 +186,13 @@
 //     });
 //   }
 //
-//   for (var b = 0; b < 11; b++) {
+//   for (var b = 0; b < 1; b++) {
 //     Signups.insert({
 //       signedAt: new Date(),
 //       mamaName: nan.profile.name,
 //       mamaTel: '13666666666',
 //       mamaId: nan._id,
+//       pregnantWeek: 1,
 //       babyName: nan.profile.name + '的宝宝',
 //       babyBirthday: new Date(now - 3 * 365 * 24 * 3600 * 1000),
 //       weixinGroup: 2,

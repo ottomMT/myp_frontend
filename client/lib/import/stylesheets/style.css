@@ -444,10 +444,10 @@ body{
   top: 0.4rem;
 }
 
-ul li:active{
-  /*background-color: #F3F3F3;*/
-  background-color: #5DC3A6;
-}
+/*ul li:active{*/
+  /*!*background-color: #F3F3F3;*!*/
+  /*background-color: #5DC3A6;*/
+/*}*/
 
 .disabled{
   background-color: #26C5B7 !important;
@@ -1134,24 +1134,51 @@ ul.info{
   color: white;
   /*width: 100%;*/
 }
-#form .submit {margin-top:20px;}
-#form .submit a {
-  display:block;
-  width:50%;
-  /*height:25px; */
-  /*line-height:25px; */
-  height: 0.8rem;
-  line-height: 0.8rem;
-  background:#fff78f;
-  margin:0 auto auto;
-  text-align:center;
-  /*font-size:14px;*/
-  font-size: 0.37rem;
-  font-weight:bold;
-  color:#ed2e34;
-  /*border-radius:20px;*/
-  border-radius: 0.18rem;
+.mmp .signup-square{
+  text-align: center;
+  height: 1.8rem;
 }
+.mmp .full-tip{
+  color: #fff100;
+  border: 4px dashed #fff100;
+  border-radius: 0.18rem;
+  font-size: 0.6rem;
+  padding: 0.2rem;
+  text-align: center;
+  margin-bottom: 0.2rem;
+  margin-top: 0.2rem;
+}
+#form #signup {
+  margin-top:20px;
+  width: 5rem;
+  background-color: #fff78f;
+  color: #ed2e34;
+  height: 0.82rem;
+  border-radius: 0.18rem;
+  margin: 0 auto;
+  font-size: 0.36rem;
+  font-weight: bold;
+  outline: 0;
+  border: none;
+  text-align: center;
+}
+/*#form .submit a {*/
+  /*display:block;*/
+  /*width:50%;*/
+  /*!*height:25px; *!*/
+  /*!*line-height:25px; *!*/
+  /*height: 0.8rem;*/
+  /*line-height: 0.8rem;*/
+  /*background:#fff78f;*/
+  /*margin:0 auto auto;*/
+  /*text-align:center;*/
+  /*!*font-size:14px;*!*/
+  /*font-size: 0.37rem;*/
+  /*font-weight:bold;*/
+  /*color:#ed2e34;*/
+  /*!*border-radius:20px;*!*/
+  /*border-radius: 0.18rem;*/
+/*}*/
 #shadow { position:absolute; left:0px; top:0px; height:100%; width:100%;}
 #shadow .bg { width:100%; height:100%; background:#000;  filter: alpha(opacity=50); -moz-opacity: 0.5; -khtml-opacity: 0.5; opacity: 0.5;}
 #shadow .img { position:fixed; left:20%; top:45%; width:60%;}
@@ -1178,10 +1205,10 @@ ul.info{
 .tip{
   width: 80%;
   /* margin-top: 10rem; */
-  margin: 5rem auto 0rem;
+  margin: 3.4rem auto 0rem;
   background-color: #FE697D;
   height: auto;
-  padding: 1.2rem 1.2rem 1.2rem 1.6rem;
+  padding: .5rem .4rem .5rem .4rem;
   padding-left: 3.6rem;
   border-radius: 12px;
   position: relative;
@@ -1192,9 +1219,9 @@ ul.info{
   /*left: 4.4rem;*/
   /*top: 1.6rem;*/
   /*right: 1rem;*/
-  line-height: 2rem;
+  line-height: .66rem;
   color: white;
-  font-size: 1.3rem;
+  font-size: .5rem;
 }
 
 .tip img{
@@ -1210,7 +1237,7 @@ ul.info{
 
 .tip-img{
   text-align: center;
-  margin-top: 2rem;
+  margin-top: .6rem;
 }
 
 .tip-img img{

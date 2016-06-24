@@ -3,7 +3,8 @@ Template.mmpListItem.helpers({
         return moment(this.startAt).format('YYYY-MM-DD HH:MM');
     },
     mmp_state: function () {
-        var now = Date();
+        var now = new Date();
+        // console.log(now);
         if (now > this.startAt){
             return { state: '报名结束', buttonColor: '#ccc'}
         } else if( now < this.signupAt){

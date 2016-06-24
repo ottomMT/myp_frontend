@@ -11,7 +11,6 @@ Template.coupon.events({
             height:'6rem',
             width: '6rem'
         },100);
-
     },
 
     // 关闭二维码弹层
