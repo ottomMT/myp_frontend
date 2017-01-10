@@ -1138,7 +1138,7 @@ ul.info{
   text-align: center;
   height: 1.8rem;
 }
-.mmp .full-tip{
+.mmp .no-signup-tip{
   color: #fff100;
   border: 4px dashed #fff100;
   border-radius: 0.18rem;
@@ -1221,7 +1221,7 @@ ul.info{
   /*right: 1rem;*/
   line-height: .66rem;
   color: white;
-  font-size: .5rem;
+  font-size: .46rem;
 }
 
 .tip img{

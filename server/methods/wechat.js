@@ -128,4 +128,3 @@ function getIdentity(access_token, openid) {
 
   return response.content;
 }
-

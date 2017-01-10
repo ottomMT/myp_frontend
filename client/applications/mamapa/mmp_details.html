@@ -26,10 +26,12 @@
                 </ul>
 
                 <!--报名表单区域-->
+                {{token}}
                 {{# if couldSignup}}
                     {{> mmpSignupForm}}
                 {{else}}
-                    <p class="full-tip">报名已满,下次再来吧~</p>
+                    <!--活动状态提醒-->
+                    <p class="no-signup-tip">{{signupTip}}</p>
                 {{/if}}
             </div>
             <!--报名后分享提示-->

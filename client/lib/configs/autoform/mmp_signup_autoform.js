@@ -1,7 +1,6 @@
 var signupBeforeInsertHook = {
     before: {
         insert: function (doc) {
-
             // 判断用户是否已报名
             // var isSigned = Signups.find({mamaId: doc.mamaId,mamapaId: doc.mamapaId}).count();
             // if(isSigned){

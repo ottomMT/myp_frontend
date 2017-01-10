@@ -1,6 +1,6 @@
 <template name="mmpSignupForm">
     <!--报名表单区域-->
-    {{#autoForm id="afInsertSignups" type="insert" collection="Signups"}}
+    {{#autoForm schema=afInsertSignupsSchema id="afInsertSignups" type="insert" collection="Signups"}}
         <div id="form">
             <!--<form>-->
                 {{> afFieldInput name="mamaId" type="hidden"}}
